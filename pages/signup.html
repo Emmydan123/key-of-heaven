@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | Key of Heaven</title>
+
+    <meta name="description"
+        content="Create your Key of Heaven member account.">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="manifest" href="../manifest.json">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+
+    <div class="container nav-container">
+
+        <a href="../index.html" class="logo">
+            Key of <span>Heaven</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <nav class="navbar" id="navbar">
+
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="prayer-room.html">Prayer Room</a>
+            <a href="prayer-request.html">Prayer Request</a>
+            <a href="past-prayers.html">Past Prayers</a>
+            <a href="events.html">Events</a>
+            <a href="members.html">Members</a>
+                <a href="teachings.html">Teachings</a>
+
+            <a href="login.html" class="nav-login">
+                Login
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= SIGN UP PAGE ================= -->
+<main class="auth-page">
+
+    <div class="auth-container signup-container">
+
+        <!-- LEFT INFORMATION -->
+        <section class="auth-info">
+
+            <span class="section-label">
+                JOIN US
+            </span>
+
+            <h1>
+                Become Part of
+                <span>Key of Heaven</span>
+            </h1>
+
+            <p>
+                Create your member account and become part of a
+                community committed to prayer, fellowship and
+                spiritual growth.
+            </p>
+
+
+            <div class="auth-features">
+
+                <div class="auth-feature">
+
+                    <div class="auth-feature-icon">
+                        🙏
+                    </div>
+
+                    <div>
+                        <h3>
+                            Join Prayer Sessions
+                        </h3>
+
+                        <p>
+                            Stay connected with our regular online
+                            prayer gatherings.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="auth-feature">
+
+                    <div class="auth-feature-icon">
+                        📖
+                    </div>
+
+                    <div>
+                        <h3>
+                            Grow Spiritually
+                        </h3>
+
+                        <p>
+                            Access teachings and resources that
+                            encourage your walk with God.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="auth-feature">
+
+                    <div class="auth-feature-icon">
+                        👤
+                    </div>
+
+                    <div>
+                        <h3>
+                            Create Your Profile
+                        </h3>
+
+                        <p>
+                            Build your member profile and choose
+                            what information you want to share.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SIGN UP CARD -->
+        <section class="auth-card signup-card">
+
+            <div class="auth-card-header">
+
+                <div class="auth-icon">
+                    ✨
+                </div>
+
+                <h2>
+                    Create Account
+                </h2>
+
+                <p>
+                    Fill in your details to get started.
+                </p>
+
+            </div>
+
+
+            <!-- SIGN UP FORM -->
+            <form id="signupForm" class="auth-form">
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- USERNAME -->
+                <div class="form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Choose a username"
+                        autocomplete="username"
+                        minlength="3"
+                        maxlength="30"
+                        required
+                    >
+
+                    <small class="form-help">
+                        Use 3–30 letters, numbers or underscores.
+                    </small>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="signupEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PHONE -->
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        autocomplete="tel"
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+
+                    <label for="signupPassword">
+                        Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="signupPassword"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="signupPasswordToggle"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                    <small class="form-help">
+                        Password must contain at least 8 characters.
+                    </small>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="confirmPasswordToggle"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+<!-- Profile Picture -->
+<div class="form-group">
+
+    <label for="profilePicture">
+        Profile Picture
+    </label>
+
+    <input
+        type="file"
+        id="profilePicture"
+        name="profilePicture"
+        accept="image/jpeg,image/png,image/webp"
+    >
+
+    <small>
+        Choose a JPG, PNG or WebP image.
+    </small>
+
+    <div
+        id="profilePicturePreview"
+        class="profile-picture-preview"
+        style="display: none;"
+    >
+        <img
+            id="profilePicturePreviewImage"
+            src=""
+            alt="Profile picture preview"
+        >
+    </div>
+
+    <div class="avatar-choice-group">
+        <span class="form-help">Or choose an avatar</span>
+
+        <div class="avatar-options">
+            <label class="avatar-option">
+                <input type="radio" name="avatar" value="avatar-sun.svg">
+                <img src="../images/avatar-sun.svg" alt="Sun avatar">
+            </label>
+            <label class="avatar-option">
+                <input type="radio" name="avatar" value="avatar-leaf.svg">
+                <img src="../images/avatar-leaf.svg" alt="Leaf avatar">
+            </label>
+            <label class="avatar-option">
+                <input type="radio" name="avatar" value="avatar-wave.svg">
+                <img src="../images/avatar-wave.svg" alt="Wave avatar">
+            </label>
+            <label class="avatar-option">
+                <input type="radio" name="avatar" value="avatar-star.svg">
+                <img src="../images/avatar-star.svg" alt="Star avatar">
+            </label>
+        </div>
+    </div>
+
+</div>
+
+                <!-- BIO -->
+                <div class="form-group">
+
+                    <label for="bio">
+                        Short Bio
+                        <span class="optional">
+                            (Optional)
+                        </span>
+                    </label>
+
+                    <textarea
+                        id="bio"
+                        name="bio"
+                        rows="3"
+                        maxlength="300"
+                        placeholder="Tell the community a little about yourself..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- FAVORITE SCRIPTURE -->
+                <div class="form-group">
+
+                    <label for="scripture">
+                        Favorite Scripture or Quote
+                        <span class="optional">
+                            (Optional)
+                        </span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="scripture"
+                        name="scripture"
+                        maxlength="200"
+                        placeholder="e.g. Psalm 23"
+                    >
+
+                </div>
+
+
+                <!-- PRAYER INTERESTS -->
+                <div class="form-group">
+
+                    <label>
+                        Prayer Interests
+                        <span class="optional">
+                            (Optional)
+                        </span>
+                    </label>
+
+                    <div class="interest-options">
+
+                        <label class="interest-option">
+                            <input
+                                type="checkbox"
+                                name="interests"
+                                value="Prayer"
+                            >
+                            <span>Prayer</span>
+                        </label>
+
+
+                        <label class="interest-option">
+                            <input
+                                type="checkbox"
+                                name="interests"
+                                value="Bible Study"
+                            >
+                            <span>Bible Study</span>
+                        </label>
+
+
+                        <label class="interest-option">
+                            <input
+                                type="checkbox"
+                                name="interests"
+                                value="Worship"
+                            >
+                            <span>Worship</span>
+                        </label>
+
+
+                        <label class="interest-option">
+                            <input
+                                type="checkbox"
+                                name="interests"
+                                value="Evangelism"
+                            >
+                            <span>Evangelism</span>
+                        </label>
+
+
+                        <label class="interest-option">
+                            <input
+                                type="checkbox"
+                                name="interests"
+                                value="Fellowship"
+                            >
+                            <span>Fellowship</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFILE VISIBILITY -->
+                <div class="form-group">
+
+                    <label>
+                        Profile Visibility
+                    </label>
+
+                    <div class="visibility-options">
+
+                        <label class="visibility-option">
+
+                            <input
+                                type="radio"
+                                name="profileVisibility"
+                                value="public"
+                                checked
+                            >
+
+                            <span>
+                                <strong>Public</strong>
+                                <small>
+                                    My selected profile information
+                                    can appear in the member directory.
+                                </small>
+                            </span>
+
+                        </label>
+
+
+                        <label class="visibility-option">
+
+                            <input
+                                type="radio"
+                                name="profileVisibility"
+                                value="private"
+                            >
+
+                            <span>
+                                <strong>Private</strong>
+                                <small>
+                                    Keep my profile out of the public
+                                    member directory.
+                                </small>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TERMS -->
+                <label class="terms-option">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required
+                    >
+
+                    <span>
+                        I agree to the Key of Heaven community
+                        guidelines and understand that my account
+                        information will be securely stored.
+                    </span>
+
+                </label>
+
+
+                <!-- SUBMIT -->
+                <button
+                    type="submit"
+                    class="btn btn-primary auth-submit"
+                >
+                    Create Account
+                </button>
+
+
+                <!-- MESSAGE -->
+                <div
+                    id="signupMessage"
+                    class="auth-message"
+                ></div>
+
+            </form>
+
+
+            <div class="auth-divider">
+                <span>OR</span>
+            </div>
+
+
+            <div class="auth-signup">
+
+                <p>
+                    Already have an account?
+                </p>
+
+                <a
+                    href="login.html"
+                    class="btn btn-outline auth-create-account"
+                >
+                    Login Instead
+                </a>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <h3>
+                Key of <span>Heaven</span>
+            </h3>
+
+            <p>
+                A digital home for prayer, fellowship,
+                spiritual growth and community.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="prayer-room.html">Prayer Room</a>
+            <a href="prayer-request.html">Prayer Request</a>
+            <a href="events.html">Events</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Account
+            </h4>
+
+            <a href="members.html">Members</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Create Account</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Connect
+            </h4>
+
+            <a
+                href="https://chat.whatsapp.com/IXUpjIuCqWgBbdZZ3yXMce"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp
+            </a>
+
+            <a
+                href="https://www.youtube.com/@KeyOfHeaven-d5p"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                YouTube
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@keyofheaven8"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                TikTok
+            </a>
+
+            <a href="mailto:keyofheaven571@gmail.com">
+                Email
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="currentYear"></span>
+            Key of Heaven. All rights reserved.
+        </p>
+    </div>
+
+</footer>
+
+
+<script src="../js/main.js"></script>
+
+
+<!-- ================= SIGN UP JAVASCRIPT ================= -->
+<script>
+
+    const signupForm =
+        document.getElementById("signupForm");
+
+    const signupMessage =
+        document.getElementById("signupMessage");
+
+
+    /* PASSWORD TOGGLE */
+
+    function setupPasswordToggle(
+        inputId,
+        buttonId
+    ) {
+
+        const input =
+            document.getElementById(inputId);
+
+        const button =
+            document.getElementById(buttonId);
+
+
+        button.addEventListener("click", function () {
+
+            if (input.type === "password") {
+
+                input.type = "text";
+
+                button.textContent = "Hide";
+
+            } else {
+
+                input.type = "password";
+
+                button.textContent = "Show";
+
+            }
+
+        });
+
+    }
+
+
+    setupPasswordToggle(
+        "signupPassword",
+        "signupPasswordToggle"
+    );
+
+
+    setupPasswordToggle(
+        "confirmPassword",
+        "confirmPasswordToggle"
+    );
+
+
+    /* SIGN UP FORM */
+
+signupForm.addEventListener("submit", async function (event) {
+
+    event.preventDefault();
+
+    const fullName =
+        document.getElementById("fullName").value.trim();
+
+    const username =
+        document.getElementById("username").value.trim();
+
+    const email =
+        document.getElementById("signupEmail").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const password =
+        document.getElementById("signupPassword").value;
+
+    const confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+    const bio =
+        document.getElementById("bio").value.trim();
+
+    const scripture =
+        document.getElementById("scripture").value.trim();
+
+    const interests =
+        Array.from(
+            document.querySelectorAll(
+                'input[name="interests"]:checked'
+            )
+        ).map(checkbox => checkbox.value);
+
+    const profileVisibility =
+        document.querySelector(
+            'input[name="profileVisibility"]:checked'
+        ).value;
+
+    signupMessage.className = "auth-message";
+    signupMessage.textContent = "";
+
+    /* PASSWORD CHECK */
+
+    if (password !== confirmPassword) {
+
+        signupMessage.textContent =
+            "The passwords do not match.";
+
+        signupMessage.classList.add("show");
+
+        return;
+    }
+
+    /* PASSWORD LENGTH */
+
+    if (password.length < 8) {
+
+        signupMessage.textContent =
+            "Your password must contain at least 8 characters.";
+
+        signupMessage.classList.add("show");
+
+        return;
+    }
+
+    /* SEND DATA TO BACKEND */
+
+    try {
+
+        signupMessage.textContent =
+            "Creating your account...";
+
+        signupMessage.classList.add("show");
+
+       const formData = new FormData();
+
+            formData.append("full_name", fullName);
+            formData.append("username", username);
+            formData.append("email", email);
+            formData.append("phone", phone);
+            formData.append("password", password);
+            formData.append("bio", bio);
+            formData.append("favorite_scripture", scripture);
+            formData.append("prayer_interests", interests.join(", "));
+            formData.append("profile_visibility", profileVisibility);
+            formData.append(
+                "avatar",
+                document.querySelector('input[name="avatar"]:checked')?.value || ""
+            );
+
+
+            // Add profile picture if one was selected
+            const profilePicture =
+                document.getElementById("profilePicture");
+
+            if (profilePicture && profilePicture.files.length > 0) {
+                formData.append(
+                    "profilePicture",
+                    profilePicture.files[0]
+                );
+            }
+
+
+const response = await fetch("/api/signup", {
+
+    method: "POST",
+
+    body: formData
+
+});
+
+        const data = await response.json();
+
+        if (!response.ok) {
+
+            signupMessage.textContent =
+                data.message ||
+                "Unable to create your account.";
+
+            signupMessage.classList.add("show");
+
+            return;
+        }
+
+        signupMessage.textContent =
+            "Account created successfully! Redirecting to login...";
+
+        signupMessage.classList.add("show");
+
+        signupForm.reset();
+
+        setTimeout(() => {
+
+            window.location.href = "login.html";
+
+        }, 2000);
+
+    } catch (error) {
+
+        console.error("Signup error:", error);
+
+        signupMessage.textContent =
+            "Unable to connect to the server. Please try again.";
+
+        signupMessage.classList.add("show");
+
+    }
+
+});
+const profilePicture =
+    document.getElementById("profilePicture");
+
+const profilePicturePreview =
+    document.getElementById("profilePicturePreview");
+
+const profilePicturePreviewImage =
+    document.getElementById("profilePicturePreviewImage");
+
+
+if (profilePicture) {
+
+    profilePicture.addEventListener("change", () => {
+
+        const file =
+            profilePicture.files[0];
+
+        if (!file) {
+
+            profilePicturePreview.style.display =
+                "none";
+
+            return;
+        }
+
+
+        const allowedTypes = [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+        ];
+
+
+        if (!allowedTypes.includes(file.type)) {
+
+            alert(
+                "Please choose a JPG, PNG or WebP image."
+            );
+
+            profilePicture.value = "";
+
+            profilePicturePreview.style.display =
+                "none";
+
+            return;
+        }
+
+
+        /*
+         * Limit profile pictures to 5 MB.
+         */
+
+        if (file.size > 5 * 1024 * 1024) {
+
+            alert(
+                "Profile picture must be 5 MB or smaller."
+            );
+
+            profilePicture.value = "";
+
+            profilePicturePreview.style.display =
+                "none";
+
+            return;
+        }
+
+
+        const reader =
+            new FileReader();
+
+
+        reader.onload = function (event) {
+
+            profilePicturePreviewImage.src =
+                event.target.result;
+
+            profilePicturePreview.style.display =
+                "block";
+
+        };
+
+
+        reader.readAsDataURL(file);
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Submit a prayer request to the Key of Heaven prayer community.">
+
+    <title>Prayer Request | Key of Heaven</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="manifest" href="../manifest.json">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-mark">✦</span>
+                <span>Key of Heaven</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+                ☰
+            </button>
+
+            <nav class="navbar" id="navbar">
+
+                <a href="../index.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="prayer-room.html">Prayer Room</a>
+
+                <a href="prayer-request.html" class="active">
+                    Prayer Request
+                </a>
+
+                <a href="past-prayers.html">Past Prayers</a>
+
+                <a href="teachings.html">Teachings</a>
+
+                <a href="events.html">Events</a>
+
+                <a href="members.html">Members</a>
+
+                <a href="login.html" class="nav-login">
+                    Login
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="inner-page-hero prayer-request-hero">
+
+        <div class="container">
+
+            <span class="section-label">
+                PRAYER REQUEST
+            </span>
+
+            <h1>Let Us Pray With You</h1>
+
+            <p>
+                Whatever is on your heart, you can share your prayer
+                request with the Key of Heaven community.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRO ================= -->
+    <section class="section prayer-request-intro">
+
+        <div class="container request-intro-grid">
+
+            <div class="request-intro-text">
+
+                <span class="section-label">
+                    YOU ARE NOT ALONE
+                </span>
+
+                <h2>
+                    Share What Is On Your Heart
+                </h2>
+
+                <p>
+                    There may be moments when you simply want someone
+                    to stand with you in prayer.
+                </p>
+
+                <p>
+                    Use the form on this page to send your prayer
+                    request to the Key of Heaven prayer community.
+                </p>
+
+                <p>
+                    Your request will be treated with care and respect.
+                </p>
+
+                <div class="request-points">
+
+                    <div class="request-point">
+                        <span>✓</span>
+                        <p>
+                            Share your request honestly.
+                        </p>
+                    </div>
+
+                    <div class="request-point">
+                        <span>✓</span>
+                        <p>
+                            Tell us how we can pray with you.
+                        </p>
+                    </div>
+
+                    <div class="request-point">
+                        <span>✓</span>
+                        <p>
+                            You can choose whether your request is
+                            private or shareable with the prayer team.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDE CARD -->
+            <div class="request-side-card">
+
+                <div class="request-side-icon">
+                    🙏
+                </div>
+
+                <h3>
+                    Prayer Changes Things
+                </h3>
+
+                <p>
+                    Take a moment, slow down and put your request
+                    into words.
+                </p>
+
+                <div class="request-divider"></div>
+
+                <p class="request-quote">
+                    Come with faith, hope and a sincere heart.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FORM SECTION ================= -->
+    <section class="section section-cream prayer-form-section">
+
+        <div class="container">
+
+            <div class="section-heading centered">
+
+                <span class="section-label">
+                    SEND YOUR REQUEST
+                </span>
+
+                <h2>
+                    Prayer Request Form
+                </h2>
+
+                <p>
+                    Please fill in the information below.
+                </p>
+
+            </div>
+
+
+            <div class="prayer-form-wrapper">
+
+                <form id="prayerRequestForm" class="prayer-form">
+
+                    <!-- NAME -->
+                    <div class="form-group">
+
+                        <label for="prayerName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="prayerName"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="prayerEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="prayerEmail"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+                    <div class="form-group">
+
+                        <label for="prayerPhone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="prayerPhone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                        >
+
+                    </div>
+
+
+                    <!-- CATEGORY -->
+                    <div class="form-group">
+
+                        <label for="prayerCategory">
+                            Prayer Category
+                        </label>
+
+                        <select
+                            id="prayerCategory"
+                            name="category"
+                            required
+                        >
+
+                            <option value="">
+                                Select a category
+                            </option>
+
+                            <option value="personal">
+                                Personal
+                            </option>
+
+                            <option value="family">
+                                Family
+                            </option>
+
+                            <option value="school">
+                                School / Education
+                            </option>
+
+                            <option value="career">
+                                Career / Work
+                            </option>
+
+                            <option value="relationships">
+                                Relationships
+                            </option>
+
+                            <option value="thanksgiving">
+                                Thanksgiving
+                            </option>
+
+                            <option value="guidance">
+                                Guidance
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- PRAYER REQUEST -->
+                    <div class="form-group">
+
+                        <label for="prayerMessage">
+                            Your Prayer Request
+                        </label>
+
+                        <textarea
+                            id="prayerMessage"
+                            name="message"
+                            rows="7"
+                            placeholder="Write your prayer request here..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- PRIVACY -->
+                    <div class="form-group">
+
+                        <label for="prayerPrivacy">
+                            Who should be able to see this request?
+                        </label>
+
+                        <select
+                            id="prayerPrivacy"
+                            name="privacy"
+                            required
+                        >
+
+                            <option value="">
+                                Select an option
+                            </option>
+
+                            <option value="private">
+                                Prayer team only
+                            </option>
+
+                            <option value="community">
+                                Prayer community
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- CONTACT PERMISSION -->
+                    <div class="checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="contactPermission"
+                            name="contactPermission"
+                        >
+
+                        <label for="contactPermission">
+                            I am okay with a member of the prayer team
+                            contacting me about this request.
+                        </label>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+                    <button
+                        type="submit"
+                        class="btn btn-primary prayer-submit-btn"
+                    >
+                        Submit Prayer Request
+                    </button>
+
+
+                    <!-- SUCCESS MESSAGE -->
+                    <div
+                        id="prayerSuccessMessage"
+                        class="form-success-message"
+                        role="alert"
+                    >
+                        <span>✓</span>
+
+                        <div>
+                            <strong>
+                                Prayer request received.
+                            </strong>
+
+                            <p>
+                                Thank you for sharing your request.
+                                We will stand with you in prayer.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section prayer-process-section">
+
+        <div class="container">
+
+            <div class="section-heading centered">
+
+                <span class="section-label">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    What Happens After You Submit?
+                </h2>
+
+            </div>
+
+
+            <div class="prayer-process-grid">
+
+                <div class="process-card">
+
+                    <span class="process-number">
+                        01
+                    </span>
+
+                    <div class="process-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        You Submit
+                    </h3>
+
+                    <p>
+                        Your prayer request is sent through the
+                        prayer request system.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span class="process-number">
+                        02
+                    </span>
+
+                    <div class="process-icon">
+                        🙏
+                    </div>
+
+                    <h3>
+                        We Pray
+                    </h3>
+
+                    <p>
+                        The appropriate prayer team will receive
+                        the request and pray with you.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span class="process-number">
+                        03
+                    </span>
+
+                    <div class="process-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        We Stand Together
+                    </h3>
+
+                    <p>
+                        You become part of a community that
+                        encourages and supports one another.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ENCOURAGEMENT ================= -->
+    <section class="section-dark prayer-encouragement">
+
+        <div class="container">
+
+            <div class="encouragement-content">
+
+                <span class="section-label">
+                    A WORD OF ENCOURAGEMENT
+                </span>
+
+                <h2>
+                    Keep Bringing Your Heart To Prayer
+                </h2>
+
+                <p>
+                    You do not have to have everything figured out
+                    before you pray. Come as you are and continue
+                    seeking Yahweh.
+                </p>
+
+                <a
+                    href="prayer-room.html"
+                    class="btn btn-gold"
+                >
+                    Visit Prayer Room
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FAQ ================= -->
+    <section class="section section-cream">
+
+        <div class="container">
+
+            <div class="section-heading centered">
+
+                <span class="section-label">
+                    QUESTIONS
+                </span>
+
+                <h2>
+                    Prayer Request FAQ
+                </h2>
+
+            </div>
+
+
+            <div class="faq-container">
+
+                <details class="faq-item">
+
+                    <summary>
+                        Can I submit a prayer request without being a member?
+                    </summary>
+
+                    <p>
+                        Yes. The prayer request form can be used by
+                        anyone who wants to share a request with the
+                        Key of Heaven prayer community.
+                    </p>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+                        Will my prayer request be public?
+                    </summary>
+
+                    <p>
+                        You can choose whether your request should
+                        remain with the prayer team or be shared with
+                        the prayer community.
+                    </p>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+                        Can I submit more than one request?
+                    </summary>
+
+                    <p>
+                        Yes. You can submit another request whenever
+                        you need prayer.
+                    </p>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+                        Can someone contact me about my request?
+                    </summary>
+
+                    <p>
+                        Yes. You can give permission in the form for
+                        a prayer-team member to contact you.
+                    </p>
+
+                </details>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="final-prayer-cta">
+
+        <div class="container">
+
+            <span class="section-label">
+                KEY OF HEAVEN
+            </span>
+
+            <h2>
+                You Are Welcome In The Prayer Room
+            </h2>
+
+            <p>
+                Pray with us. Learn with us. Grow with us.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a
+                    href="../index.html"
+                    class="btn btn-light"
+                >
+                    Back To Home
+                </a>
+
+                <a
+                    href="prayer-room.html"
+                    class="btn btn-gold"
+                >
+                    Enter Prayer Room
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div class="footer-brand">
+
+                <h3>
+                    Key of Heaven
+                </h3>
+
+                <p>
+                    A community committed to prayer, faith,
+                    fellowship and spiritual growth.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="prayer-room.html">
+                    Prayer Room
+                </a>
+
+                <a href="prayer-request.html">
+                    Prayer Request
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Community
+                </h4>
+
+                <a href="past-prayers.html">
+                    Past Prayers
+                </a>
+
+                <a href="teachings.html">
+                    Teachings
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="members.html">
+                    Members
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Connect
+                </h4>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="signup.html">
+                    Sign Up
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                ©
+                <span id="currentYear"></span>
+                Key of Heaven. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/main.js"></script>
+    <script>
+
+const prayerRequestForm =
+    document.getElementById("prayerRequestForm");
+
+const prayerMessage =
+    document.getElementById("prayerMessage");
+
+const prayerSuccessMessage =
+    document.getElementById("prayerSuccessMessage");
+
+
+prayerRequestForm.addEventListener(
+    "submit",
+    async function (event) {
+
+        event.preventDefault();
+
+        const prayerRequest =
+    prayerMessage.value.trim();
+
+const prayerEmail =
+    document.getElementById("prayerEmail").value.trim();
+
+const prayerPhone =
+    document.getElementById("prayerPhone").value.trim();
+
+const allowContact =
+    document.getElementById("contactPermission").checked;
+        if (!prayerRequest) {
+
+            alert("Please enter your prayer request.");
+
+            return;
+        }
+
+
+        const submitButton =
+            prayerRequestForm.querySelector(
+                'button[type="submit"]'
+            );
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+            "Submitting...";
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "../api/prayer-requests",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            prayer_request: prayerRequest,
+                            prayer_email: prayerEmail,
+                            prayer_phone: prayerPhone,
+                            is_private: false,
+                            allow_contact: allowContact
+                        })
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            if (!response.ok) {
+
+                if (response.status === 401) {
+
+                    alert(
+                        "Please log in before submitting a prayer request."
+                    );
+
+                    window.location.href =
+                        "login.html";
+
+                    return;
+                }
+
+
+                alert(
+                    data.message ||
+                    "Unable to submit your prayer request."
+                );
+
+                return;
+            }
+
+
+            prayerSuccessMessage.classList.add("show");
+
+            prayerRequestForm.reset();
+
+
+            prayerSuccessMessage.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+
+        } catch (error) {
+
+            console.error(
+                "Prayer request error:",
+                error
+            );
+
+            alert(
+                "Unable to connect to the server. Please try again."
+            );
+
+        } finally {
+
+            submitButton.disabled = false;
+
+            submitButton.textContent =
+                "Submit Prayer Request";
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>

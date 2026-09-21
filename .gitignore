@@ -1,0 +1,8 @@
+node_modules/
+.env
+.env.*
+!.env.example
+uploads/profile-pictures/*
+!uploads/profile-pictures/.gitkeep
+npm-debug.log*
+.DS_Store

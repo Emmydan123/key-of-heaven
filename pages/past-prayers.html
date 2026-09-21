@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Past Prayers | Key of Heaven</title>
+
+    <meta name="description"
+          content="Listen to past prayer sessions and spiritual moments from Key of Heaven.">
+
+    <meta name="theme-color" content="#111111">
+
+    <link rel="manifest" href="../manifest.json">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="../index.html" class="logo">
+            KEY OF <span>HEAVEN</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navbar">
+
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="prayer-room.html">Prayer Room</a>
+            </li>
+
+            <li>
+                <a href="prayer-request.html">Prayer Request</a>
+            </li>
+
+            <li>
+                <a href="past-prayers.html" class="active">
+                    Past Prayers
+                </a>
+            </li>
+
+            <li>
+                <a href="teachings.html">Teachings</a>
+            </li>
+
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+
+            <li>
+                <a href="members.html">Members</a>
+            </li>
+
+            <li>
+                <a href="login.html" class="nav-login">
+                    Login
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     PAGE HERO
+========================================================= -->
+
+<section class="inner-page-hero">
+
+    <div class="container">
+
+        <p class="hero-label">
+            PRAYER ARCHIVE
+        </p>
+
+        <h1>
+            Past Prayers
+        </h1>
+
+        <p>
+            Revisit previous prayer sessions, receive encouragement,
+            and continue growing in faith.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+
+<section class="past-prayers-intro">
+
+    <div class="container">
+
+        <div class="archive-intro">
+
+            <div>
+
+                <span class="section-label">
+                    PRAYER ARCHIVE
+                </span>
+
+                <h2>
+                    Prayer Moments That Remain With Us
+                </h2>
+
+            </div>
+
+            <p>
+                Every prayer session is an opportunity to seek Yahweh,
+                grow in faith, and stand together as a community.
+                This archive will preserve our previous prayer sessions
+                so members can return to them whenever they need
+                encouragement and spiritual strength.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SEARCH & FILTER
+========================================================= -->
+
+<section class="archive-tools">
+
+    <div class="container">
+
+        <div class="archive-tools-box">
+
+            <div class="archive-search">
+
+                <label for="prayerSearch">
+                    Search prayers
+                </label>
+
+                <input
+                    type="search"
+                    id="prayerSearch"
+                    placeholder="Search by topic..."
+                >
+
+            </div>
+
+
+            <div class="archive-filter">
+
+                <label for="prayerFilter">
+                    Filter
+                </label>
+
+                <select id="prayerFilter">
+
+                    <option value="all">
+                        All Prayers
+                    </option>
+
+                    <option value="monday">
+                        Monday Prayers
+                    </option>
+
+                    <option value="friday">
+                        Friday Prayers
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PAST PRAYERS
+========================================================= -->
+
+<section class="past-prayers-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                OUR ARCHIVE
+            </span>
+
+            <h2>
+                Previous Prayer Sessions
+            </h2>
+
+            <p>
+                Explore previous sessions from the Key of Heaven
+                prayer community.
+            </p>
+
+        </div>
+
+            <div id="pastPrayersContainer" class="prayer-archive-grid">
+                Loading past prayers...
+            </div>
+
+
+
+            <!-- FUTURE DATABASE CARD -->
+
+            <article class="archive-card archive-placeholder">
+
+                <div class="archive-placeholder-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    More Prayer Sessions
+                </h3>
+
+                <p>
+                    New prayer recordings will be added to this
+                    archive as they become available.
+                </p>
+
+            </article>
+
+        
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT WILL BE STORED
+========================================================= -->
+
+```html
+<section class="section-dark archive-storage-section">
+
+    <div class="container">
+
+        <div class="section-heading light-heading">
+
+            <span class="section-label">
+                OUR ARCHIVE
+            </span>
+
+            <h2>
+                Everything In One Place
+            </h2>
+
+            <p>
+                Our prayer archive keeps important details from
+                previous prayer sessions together in one place.
+            </p>
+
+        </div>
+
+
+        <div class="archive-storage-grid">
+
+            <div class="storage-card">
+
+                <div class="storage-icon">
+                    📅
+                </div>
+
+                <h3>
+                    Date
+                </h3>
+
+                <p>
+                    See when each prayer session took place.
+                </p>
+
+            </div>
+
+
+            <div class="storage-card">
+
+                <div class="storage-icon">
+                    🙏
+                </div>
+
+                <h3>
+                    Prayer Topic
+                </h3>
+
+                <p>
+                    Discover the main prayer focus of each session.
+                </p>
+
+            </div>
+
+
+            <div class="storage-card">
+
+                <div class="storage-icon">
+                    🎙
+                </div>
+
+                <h3>
+                    Prayer Leader
+                </h3>
+
+                <p>
+                    See who led the prayer session.
+                </p>
+
+            </div>
+
+
+            <div class="storage-card">
+
+                <div class="storage-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Prayer Points
+                </h3>
+
+                <p>
+                    Review the prayer points shared during the session.
+                </p>
+
+            </div>
+
+
+            <div class="storage-card">
+
+                <div class="storage-icon">
+                    ▶
+                </div>
+
+                <h3>
+                    Recordings
+                </h3>
+
+                <p>
+                    Access available recordings from previous
+                    prayer meetings.
+                </p>
+
+            </div>
+
+
+            <div class="storage-card">
+
+                <div class="storage-icon">
+                    📖
+                </div>
+
+                <h3>
+                    Session Details
+                </h3>
+
+                <p>
+                    Read descriptions and additional information
+                    about each prayer session.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+```
+
+
+
+<!-- =========================================================
+     ENCOURAGEMENT
+========================================================= -->
+
+<section class="archive-encouragement">
+
+    <div class="container">
+
+        <div class="encouragement-box">
+
+            <span class="section-label">
+                KEEP SEEKING
+            </span>
+
+            <h2>
+                You Can Always Return To The Place Of Prayer
+            </h2>
+
+            <p>
+                Whether you missed a session or simply want to
+                revisit a powerful moment, the prayer archive
+                will help you stay connected.
+            </p>
+
+            <a href="prayer-room.html" class="btn btn-primary">
+                Enter Prayer Room
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h3>
+                    KEY OF <span>HEAVEN</span>
+                </h3>
+
+                <p>
+                    A prayer community committed to prayer,
+                    teaching, fellowship and spiritual growth.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="prayer-room.html">Prayer Room</a>
+                <a href="prayer-request.html">Prayer Request</a>
+                <a href="teachings.html">Teachings</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Community
+                </h4>
+
+                <a href="members.html">Members</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                Key of Heaven. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+<script>
+/* =========================================================
+   PAST PRAYERS DATABASE SYSTEM
+========================================================= */
+
+const pastPrayersContainer =
+    document.getElementById("pastPrayersContainer");
+
+const prayerSearch =
+    document.getElementById("prayerSearch");
+
+const prayerFilter =
+    document.getElementById("prayerFilter");
+
+let allPastPrayers = [];
+
+
+/* =========================================================
+   ESCAPE HTML
+   Prevents database text from being interpreted as HTML
+========================================================= */
+
+function escapePastPrayerHTML(value) {
+
+    if (value === null || value === undefined) {
+        return "";
+    }
+
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+
+/* =========================================================
+   FORMAT DATE
+========================================================= */
+
+function formatPastPrayerDate(dateValue) {
+
+    if (!dateValue) {
+        return "Date not available";
+    }
+
+    const dateText = String(dateValue).substring(0, 10);
+
+    const parts = dateText.split("-");
+
+    if (parts.length !== 3) {
+        return dateText;
+    }
+
+    const year = Number(parts[0]);
+    const month = Number(parts[1]);
+    const day = Number(parts[2]);
+
+    const date = new Date(year, month - 1, day);
+
+    return date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    });
+}
+
+
+/* =========================================================
+   RENDER PAST PRAYERS
+========================================================= */
+
+function renderPastPrayers(prayers) {
+
+    if (!pastPrayersContainer) {
+        return;
+    }
+
+
+    /* No results */
+
+    if (!prayers || prayers.length === 0) {
+
+        pastPrayersContainer.innerHTML = `
+            <div class="archive-card archive-placeholder">
+
+                <div class="archive-placeholder-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    No Prayer Sessions Found
+                </h3>
+
+                <p>
+                    No past prayer session matches your search
+                    or selected filter.
+                </p>
+
+            </div>
+        `;
+
+        return;
+    }
+
+
+    /* Create cards */
+
+    pastPrayersContainer.innerHTML = prayers.map(prayer => {
+
+        const day =
+            escapePastPrayerHTML(prayer.prayer_day);
+
+        const title =
+            escapePastPrayerHTML(prayer.title);
+
+        const leader =
+            escapePastPrayerHTML(
+                prayer.prayer_leader || "Not provided"
+            );
+
+        const description =
+            escapePastPrayerHTML(
+                prayer.description ||
+                "Prayer session from the Key of Heaven community."
+            );
+
+        const prayerPoints =
+            escapePastPrayerHTML(
+                prayer.prayer_points ||
+                "Prayer points were not provided."
+            );
+
+        const recordingLink =
+            prayer.recording_link
+                ? escapePastPrayerHTML(prayer.recording_link)
+                : "";
+
+
+        const date =
+            formatPastPrayerDate(prayer.prayer_date);
+
+
+        const recordingButton =
+            recordingLink
+
+                ? `
+                    <a
+                        href="${recordingLink}"
+                        class="archive-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        ▶ Listen / Watch Recording
+                    </a>
+                  `
+
+                : `
+                    <button
+                        class="archive-button"
+                        disabled
+                    >
+                        Recording Not Available
+                    </button>
+                  `;
+
+
+        return `
+            <article class="archive-card">
+
+                <div class="archive-card-top">
+
+                    <span class="archive-type">
+                        ${day} Prayer
+                    </span>
+
+                    <span class="archive-date">
+                        ${date}
+                    </span>
+
+                </div>
+
+
+                <div class="archive-card-content">
+
+                    <h3>
+                        ${title}
+                    </h3>
+
+
+                    <p>
+                        ${description}
+                    </p>
+
+
+                    <div class="archive-meta">
+
+                        <span>
+                            🎙 Leader:
+                            <strong>
+                                ${leader}
+                            </strong>
+                        </span>
+
+                        <span>
+                            🕊 ${day} Prayer
+                        </span>
+
+                    </div>
+
+
+                    <div class="past-prayer-points">
+
+                        <strong>
+                            🙏 Prayer Points
+                        </strong>
+
+                        <p>
+                            ${prayerPoints.replace(/\n/g, "<br>")}
+                        </p>
+
+                    </div>
+
+
+                    ${recordingButton}
+
+                </div>
+
+            </article>
+        `;
+
+    }).join("");
+}
+
+
+/* =========================================================
+   FILTER + SEARCH
+========================================================= */
+
+function filterPastPrayers() {
+
+    const searchText =
+        prayerSearch
+            ? prayerSearch.value.trim().toLowerCase()
+            : "";
+
+
+    const selectedFilter =
+        prayerFilter
+            ? prayerFilter.value
+            : "all";
+
+
+    const filtered =
+        allPastPrayers.filter(prayer => {
+
+            const title =
+                String(prayer.title || "").toLowerCase();
+
+            const leader =
+                String(prayer.prayer_leader || "").toLowerCase();
+
+            const points =
+                String(prayer.prayer_points || "").toLowerCase();
+
+            const description =
+                String(prayer.description || "").toLowerCase();
+
+            const day =
+                String(prayer.prayer_day || "").toLowerCase();
+
+
+            const matchesSearch =
+                !searchText ||
+
+                title.includes(searchText) ||
+
+                leader.includes(searchText) ||
+
+                points.includes(searchText) ||
+
+                description.includes(searchText);
+
+
+            const matchesFilter =
+                selectedFilter === "all" ||
+
+                (
+                    selectedFilter === "monday" &&
+                    day === "monday"
+                ) ||
+
+                (
+                    selectedFilter === "friday" &&
+                    day === "friday"
+                );
+
+
+            return matchesSearch && matchesFilter;
+
+        });
+
+
+    renderPastPrayers(filtered);
+}
+
+
+/* =========================================================
+   LOAD PAST PRAYERS FROM DATABASE
+========================================================= */
+
+async function loadPastPrayers() {
+
+    if (!pastPrayersContainer) {
+        return;
+    }
+
+
+    pastPrayersContainer.innerHTML = `
+        <div class="archive-card archive-placeholder">
+
+            <div class="archive-placeholder-icon">
+                ⏳
+            </div>
+
+            <h3>
+                Loading Past Prayers...
+            </h3>
+
+            <p>
+                Please wait while the prayer archive loads.
+            </p>
+
+        </div>
+    `;
+
+
+    try {
+
+        const response =
+            await fetch("/api/past-prayers");
+
+
+        const data =
+            await response.json();
+
+
+        if (!response.ok || !data.success) {
+
+            throw new Error(
+                data.message ||
+                "Could not load past prayers."
+            );
+        }
+
+
+        allPastPrayers =
+            Array.isArray(data.pastPrayers)
+                ? data.pastPrayers
+                : [];
+
+
+        renderPastPrayers(allPastPrayers);
+
+
+    } catch (error) {
+
+        console.error(
+            "Past prayers loading error:",
+            error
+        );
+
+
+        pastPrayersContainer.innerHTML = `
+            <div class="archive-card archive-placeholder">
+
+                <div class="archive-placeholder-icon">
+                    ⚠️
+                </div>
+
+                <h3>
+                    Unable To Load Past Prayers
+                </h3>
+
+                <p>
+                    We could not connect to the prayer archive.
+                    Please refresh the page and try again.
+                </p>
+
+            </div>
+        `;
+    }
+}
+
+
+/* =========================================================
+   SEARCH EVENT
+========================================================= */
+
+if (prayerSearch) {
+
+    prayerSearch.addEventListener(
+        "input",
+        filterPastPrayers
+    );
+
+}
+
+
+/* =========================================================
+   FILTER EVENT
+========================================================= */
+
+if (prayerFilter) {
+
+    prayerFilter.addEventListener(
+        "change",
+        filterPastPrayers
+    );
+
+}
+
+
+/* =========================================================
+   START
+========================================================= */
+
+loadPastPrayers();
+
+</script>
+
+
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
+

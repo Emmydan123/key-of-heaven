@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard - Key of Heaven</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="container">
+
+        <div class="logo">
+            Key of Heaven
+        </div>
+
+        <nav class="navbar">
+
+            <a href="index.html">Home</a>
+
+            <a href="dashboard.html">My Dashboard</a>
+
+            <a href="pages/members.html">Members</a>
+
+            <button id="adminLogout">
+                Logout
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="inner-hero">
+
+        <div class="container">
+
+            <h1>Admin Dashboard</h1>
+
+            <p>
+                Manage the Key of Heaven prayer community.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-section">
+
+        <div class="container">
+
+            <div id="adminMessage">
+                Checking admin access...
+            </div>
+
+
+            <div id="adminContent" style="display: none;">
+
+                <h2>Welcome, <span id="adminName"></span></h2>
+
+                <div class="dashboard-grid">
+
+                    <div class="dashboard-card admin-members-card">
+
+                        <h3>👥 Members</h3>
+
+                        <p>
+                            View and manage registered members.
+                        </p>
+
+                        <div id="adminMembersList">
+                            Loading members...
+                        </div>
+
+                    </div>
+
+                   <div class="dashboard-card admin-teachings-card">
+                        <h3>📖 Teachings</h3>
+                        <p>Create and manage teachings for the prayer community.</p>
+
+                        <div class="teaching-form">
+
+                            <input
+                                type="text"
+                                id="teachingTitle"
+                                placeholder="Teaching title"
+                            >
+
+                            <textarea
+                                id="teachingContent"
+                                rows="8"
+                                placeholder="Write your teaching here..."
+                            ></textarea>
+
+                            <select id="teachingStatus">
+                                <option value="draft">Draft</option>
+                                <option value="published">Published</option>
+                            </select>
+
+                            <button
+                                type="button"
+                                id="createTeachingButton"
+                            >
+                                Create Teaching
+                            </button>
+
+                            <p id="teachingMessage"></p>
+
+                        </div>
+
+                        <hr>
+
+                        <h4>Existing Teachings</h4>
+
+                        <div id="adminTeachingsList">
+                            Loading teachings...
+                        </div>
+                    </div>
+
+
+                    <div class="dashboard-card admin-prayer-card">
+                        <h3>🙏 Prayer Requests</h3>
+                        <p>View and manage members' prayer requests.</p>
+
+                        <div id="adminPrayerRequestsList">
+                            Loading prayer requests...
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card admin-events-card">
+
+                        <h3>📅 Events</h3>
+
+                        <p>
+                            Create and manage community events.
+                        </p>
+
+                        <div class="event-form">
+
+                            <input
+                                type="text"
+                                id="eventTitle"
+                                placeholder="Event title"
+                            >
+
+                            <textarea
+                                id="eventDescription"
+                                rows="5"
+                                placeholder="Event description"
+                            ></textarea>
+
+                            <label for="eventDate">
+                                Event Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="eventDate"
+                            >
+
+                            <label for="eventTime">
+                                Event Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="eventTime"
+                            >
+
+                            <input
+                                type="text"
+                                id="eventLocation"
+                                placeholder="Location e.g. Online"
+                            >
+
+                            <select id="eventStatus">
+
+                                <option value="upcoming">
+                                    Upcoming
+                                </option>
+
+                                <option value="completed">
+                                    Completed
+                                </option>
+
+                                <option value="cancelled">
+                                    Cancelled
+                                </option>
+
+                            </select>
+
+                            <button
+                                type="button"
+                                id="createEventButton"
+                            >
+                                Create Event
+                            </button>
+
+                            <p id="eventMessage"></p>
+
+                        </div>
+
+                        <hr>
+
+                        <h4>Existing Events</h4>
+
+                        <div id="adminEventsList">
+                            Loading events...
+                        </div>
+
+                        </div>    
+                            <div class="dashboard-card admin-past-prayers-card">        
+
+                                <h3>🙏 Past Prayers</h3>
+
+                                <p>
+                                    Add and manage recordings of past prayer meetings.
+                                </p>
+
+                                <div class="past-prayer-form">
+
+                                    <input
+                                        type="text"
+                                        id="pastPrayerTitle"
+                                        placeholder="Prayer title or topic"
+                                    >
+
+                                    <label for="pastPrayerDay">
+                                        Prayer Day
+                                    </label>
+
+                                    <select id="pastPrayerDay">
+
+                                        <option value="Monday">
+                                            Monday
+                                        </option>
+
+                                        <option value="Friday">
+                                            Friday
+                                        </option>
+
+                                    </select>
+
+                                    <label for="pastPrayerDate">
+                                        Prayer Date
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        id="pastPrayerDate"
+                                    >
+
+                                    <input
+                                        type="text"
+                                        id="pastPrayerLeader"
+                                        placeholder="Prayer leader"
+                                    >
+
+                                    <textarea
+                                        id="pastPrayerPoints"
+                                        rows="6"
+                                        placeholder="Prayer points..."
+                                    ></textarea>
+
+                                    <input
+                                        type="url"
+                                        id="pastPrayerRecording"
+                                        placeholder="Google Meet recording link"
+                                    >
+
+                                    <textarea
+                                        id="pastPrayerDescription"
+                                        rows="4"
+                                        placeholder="Description (optional)"
+                                    ></textarea>
+
+                                    <button
+                                        type="button"
+                                        id="createPastPrayerButton"
+                                    >
+                                        Add Past Prayer
+                                    </button>
+
+                                    <p id="pastPrayerMessage"></p>
+
+                            </div>
+
+                            <hr>
+
+                            <h4>Existing Past Prayers</h4>
+
+                            <div id="adminPastPrayersList">
+                                Loading past prayers...
+                            </div>
+
+                        </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>
+            &copy; <span id="currentYear"></span>
+            Key of Heaven. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+
+async function checkAdminAccess() {
+
+    const adminMessage =
+        document.getElementById("adminMessage");
+
+    const adminContent =
+        document.getElementById("adminContent");
+
+    try {
+
+        const response =
+            await fetch("/api/me");
+
+        const data =
+            await response.json();
+
+        if (!response.ok) {
+
+            window.location.href =
+                "pages/login.html";
+
+            return;
+        }
+
+        const adminCheck =
+            await fetch("/api/admin/check");
+
+        const adminData =
+            await adminCheck.json();
+
+        if (!adminCheck.ok || !adminData.isAdmin) {
+
+            adminMessage.textContent =
+                "You do not have permission to access the admin dashboard.";
+
+            return;
+        }
+
+        adminMessage.style.display =
+            "none";
+
+        adminContent.style.display =
+            "block";
+
+        document.getElementById("adminName")
+            .textContent =
+            data.member.full_name;
+
+    } catch (error) {
+
+        console.error(
+            "Admin access error:",
+            error
+        );
+
+        adminMessage.textContent =
+            "Unable to verify admin access.";
+
+    }
+
+}
+
+
+// Logout
+document.getElementById("adminLogout")
+    .addEventListener("click", async () => {
+
+        try {
+
+            await fetch("/api/logout", {
+                method: "POST"
+            });
+
+            window.location.href =
+                "pages/login.html";
+
+        } catch (error) {
+
+            console.error(error);
+
+        }
+
+    });
+
+
+document.getElementById("currentYear")
+    .textContent =
+    new Date().getFullYear();
+
+
+async function loadAdminMembers() {
+
+    const membersList =
+        document.getElementById("adminMembersList");
+
+    try {
+
+        const response =
+            await fetch("/api/admin/members");
+
+        const data =
+            await response.json();
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.message ||
+                "Unable to load members."
+            );
+
+        }
+
+        if (!data.members || data.members.length === 0) {
+
+            membersList.innerHTML = `
+                <p>No members have registered yet.</p>
+            `;
+
+            return;
+        }
+
+        membersList.innerHTML =
+            data.members.map(member => {
+
+                return `
+                    <div class="admin-member">
+
+                        <strong>
+                            ${escapeHTML(member.full_name)}
+                        </strong>
+
+                        <span>
+                            @${escapeHTML(member.username)}
+                        </span>
+
+                        <span>
+                            ${escapeHTML(member.email)}
+                        </span>
+
+                        <span>
+                            ${member.is_admin === 1
+                                ? "👑 Admin"
+                                : "Member"}
+                        </span>
+
+                        <div class="admin-member-actions">
+
+                            ${
+                                member.is_admin == 1
+                                    ? `
+                                        <button
+                                            type="button"
+                                            onclick="changeAdminStatus(${member.id}, false);"
+                                        >
+                                            Remove Admin
+                                        </button>
+                                    `
+                                    : `
+                                        <button
+                                            type="button"
+                                            onclick="changeAdminStatus(${member.id}, true)"
+                                        >
+                                            Make Admin
+                                        </button>
+                                    `
+                            }
+
+                        </div>
+
+                    </div>
+                `;
+
+            }).join("");
+
+    } catch (error) {
+
+        console.error(
+            "Admin members error:",
+            error
+        );
+
+        membersList.innerHTML = `
+            <p>
+                Unable to load members.
+            </p>
+        `;
+    }
+}
+
+
+function escapeHTML(value) {
+
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+
+async function changeAdminStatus(memberId, makeAdmin) {
+
+    const action = makeAdmin
+        ? "make this member an admin"
+        : "remove this member's admin access";
+
+    const confirmed = confirm(
+        `Are you sure you want to ${action}?`
+    );
+
+    if (!confirmed) {
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+            `/api/admin/members/${memberId}/admin`,
+            {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    is_admin: makeAdmin
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+
+            alert(
+                data.message ||
+                "Unable to update admin status."
+            );
+
+            return;
+        }
+
+        alert(data.message);
+
+        loadAdminMembers();
+
+    } catch (error) {
+
+        console.error(
+            "Admin status update error:",
+            error
+        );
+
+        alert(
+            "Unable to connect to the server. Please try again."
+        );
+    }
+}
+
+
+async function loadAdminPrayerRequests() {
+
+    const requestsList =
+        document.getElementById("adminPrayerRequestsList");
+
+    try {
+
+        const response =
+            await fetch("/api/admin/prayer-requests");
+
+        const data =
+            await response.json();
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.message ||
+                "Unable to load prayer requests."
+            );
+
+        }
+
+        if (
+            !data.prayerRequests ||
+            data.prayerRequests.length === 0
+        ) {
+
+            requestsList.innerHTML = `
+                <p>No prayer requests have been submitted yet.</p>
+            `;
+
+            return;
+        }
+
+        requestsList.innerHTML =
+            data.prayerRequests.map(request => {
+
+                return `
+                    <div class="admin-prayer-request">
+
+                        <div class="prayer-request-header">
+
+                            <strong>
+                                ${escapeHTML(request.full_name)}
+                            </strong>
+
+                            <span>
+                                @${escapeHTML(request.username)}
+                            </span>
+
+                        </div>
+
+                        <p class="prayer-request-text">
+                            ${escapeHTML(request.prayer_request)}
+                        </p>
+
+                        <div class="prayer-request-details">
+
+                            <span>
+                                Status:
+                                <strong>
+                                    ${escapeHTML(request.status)}
+                                </strong>
+                            </span>
+
+                            <span>
+                                ${new Date(
+                                    request.created_at
+                                ).toLocaleString()}
+                            </span>
+
+                        </div>
+
+                        ${
+                            request.allow_contact
+                                ? `
+                                    <div class="prayer-contact">
+                                        📧 ${escapeHTML(
+                                            request.prayer_email ||
+                                            "No email"
+                                        )}
+                                        <br>
+                                        📱 ${escapeHTML(
+                                            request.prayer_phone ||
+                                            "No phone"
+                                        )}
+                                    </div>
+                                  `
+                                : `
+                                    <div class="prayer-contact">
+                                        🚫 Member did not allow contact.
+                                    </div>
+                                  `
+                        }
+
+                        <div class="prayer-status-actions">
+
+                            <button
+                                type="button"
+                                onclick="changePrayerStatus(
+                                    ${request.id},
+                                    'pending'
+                                )"
+                            >
+                                Pending
+                            </button>
+
+                            <button
+                                type="button"
+                                onclick="changePrayerStatus(
+                                    ${request.id},
+                                    'prayed'
+                                )"
+                            >
+                                🙏 Prayed
+                            </button>
+
+                            <button
+                                type="button"
+                                onclick="changePrayerStatus(
+                                    ${request.id},
+                                    'answered'
+                                )"
+                            >
+                                ✅ Answered
+                            </button>
+
+                        </div>
+
+                    </div>
+                `;
+
+            }).join("");
+
+    } catch (error) {
+
+        console.error(
+            "Admin prayer requests error:",
+            error
+        );
+
+        requestsList.innerHTML = `
+            <p>Unable to load prayer requests.</p>
+        `;
+    }
+}
+
+
+async function changePrayerStatus(
+    prayerRequestId,
+    status
+) {
+
+    try {
+
+        const response =
+            await fetch(
+                `/api/admin/prayer-requests/${prayerRequestId}/status`,
+                {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        status: status
+                    })
+                }
+            );
+
+        const data =
+            await response.json();
+
+        if (!response.ok) {
+
+            alert(
+                data.message ||
+                "Unable to update prayer request."
+            );
+
+            return;
+        }
+
+        alert(data.message);
+
+        loadAdminPrayerRequests();
+
+    } catch (error) {
+
+        console.error(
+            "Prayer status update error:",
+            error
+        );
+
+        alert(
+            "Unable to connect to the server. Please try again."
+        );
+    }
+}
+
+
+async function loadAdminTeachings() {
+
+    const teachingsList =
+        document.getElementById("adminTeachingsList");
+
+    try {
+
+        const response =
+            await fetch("/api/admin/teachings");
+
+        const data =
+            await response.json();
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.message ||
+                "Unable to load teachings."
+            );
+
+        }
+
+        if (
+            !data.teachings ||
+            data.teachings.length === 0
+        ) {
+
+            teachingsList.innerHTML = `
+                <p>No teachings have been created yet.</p>
+            `;
+
+            return;
+        }
+
+        teachingsList.innerHTML =
+            data.teachings.map(teaching => {
+
+                return `
+                    <div class="admin-teaching">
+
+                        <h4>
+                            ${escapeHTML(teaching.title)}
+                        </h4>
+
+                        <p>
+                            ${escapeHTML(teaching.content)}
+                        </p>
+
+                        <div>
+                            Status:
+                            <strong>
+                                ${escapeHTML(teaching.status)}
+                            </strong>
+                        </div>
+
+                        <small>
+                            By ${escapeHTML(teaching.author_name)}
+                        </small>
+
+                    </div>
+                `;
+
+            }).join("");
+
+    } catch (error) {
+
+        console.error(
+            "Admin teachings error:",
+            error
+        );
+
+        teachingsList.innerHTML = `
+            <p>Unable to load teachings.</p>
+        `;
+    }
+}
+
+
+document
+    .getElementById("createTeachingButton")
+    .addEventListener("click", async () => {
+
+        const title =
+            document.getElementById("teachingTitle")
+                .value.trim();
+
+        const content =
+            document.getElementById("teachingContent")
+                .value.trim();
+
+        const status =
+            document.getElementById("teachingStatus")
+                .value;
+
+        const message =
+            document.getElementById("teachingMessage");
+
+        if (!title) {
+
+            message.textContent =
+                "Please enter a teaching title.";
+
+            return;
+        }
+
+        if (!content) {
+
+            message.textContent =
+                "Please enter the teaching content.";
+
+            return;
+        }
+
+        const button =
+            document.getElementById(
+                "createTeachingButton"
+            );
+
+        button.disabled = true;
+        button.textContent = "Creating...";
+
+        try {
+
+            const response =
+                await fetch(
+                    "/api/admin/teachings",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            title: title,
+                            content: content,
+                            status: status
+                        })
+                    }
+                );
+
+            const data =
+                await response.json();
+
+            if (!response.ok) {
+
+                message.textContent =
+                    data.message ||
+                    "Unable to create teaching.";
+
+                return;
+            }
+
+            message.textContent =
+                "Teaching created successfully.";
+
+            document.getElementById(
+                "teachingTitle"
+            ).value = "";
+
+            document.getElementById(
+                "teachingContent"
+            ).value = "";
+
+            document.getElementById(
+                "teachingStatus"
+            ).value = "draft";
+
+            loadAdminTeachings();
+
+        } catch (error) {
+
+            console.error(
+                "Create teaching error:",
+                error
+            );
+
+            message.textContent =
+                "Unable to connect to the server.";
+
+        } finally {
+
+            button.disabled = false;
+            button.textContent = "Create Teaching";
+
+        }
+
+    });
+
+
+async function loadAdminEvents() {
+
+    const eventsList =
+        document.getElementById("adminEventsList");
+
+    if (!eventsList) return;
+
+    try {
+
+        const response =
+            await fetch("/api/admin/events");
+
+        const data =
+            await response.json();
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.message ||
+                "Unable to load events."
+            );
+
+        }
+
+        if (
+            !data.events ||
+            data.events.length === 0
+        ) {
+
+            eventsList.innerHTML = `
+                <p>
+                    No events have been created yet.
+                </p>
+            `;
+
+            return;
+        }
+
+        eventsList.innerHTML =
+            data.events.map(event => {
+
+                /*
+                 * MySQL DATE values can arrive as strings
+                 * such as YYYY-MM-DD or ISO date strings.
+                 * We extract the date safely first.
+                 */
+
+                const rawDate =
+                    String(event.event_date)
+                        .split("T")[0];
+
+                const dateParts =
+                    rawDate.split("-");
+
+                let formattedDate =
+                    "Date not available";
+
+                let day =
+                    "";
+
+                if (
+                    dateParts.length === 3 &&
+                    dateParts[0] &&
+                    dateParts[1] &&
+                    dateParts[2]
+                ) {
+
+                    const date =
+                        new Date(
+                            Number(dateParts[0]),
+                            Number(dateParts[1]) - 1,
+                            Number(dateParts[2])
+                        );
+
+                    if (!isNaN(date.getTime())) {
+
+                        day =
+                            date.toLocaleDateString(
+                                "en-US",
+                                {
+                                    weekday: "long"
+                                }
+                            );
+
+                        formattedDate =
+                            date.toLocaleDateString(
+                                "en-US",
+                                {
+                                    day: "numeric",
+                                    month: "long",
+                                    year: "numeric"
+                                }
+                            );
+
+                    }
+
+                }
+
+                const time =
+                    event.event_time
+                        ? String(event.event_time)
+                            .substring(0, 5)
+                        : "Not specified";
+
+                return `
+                    <div class="admin-event">
+
+                        <h4>
+                            ${escapeHTML(event.title)}
+                        </h4>
+
+                        <p>
+                            ${escapeHTML(event.description)}
+                        </p>
+
+                        <p>
+                            📅 <strong>Date:</strong>
+                            ${formattedDate}
+                        </p>
+
+                        ${
+                            day
+                                ? `
+                                    <p>
+                                        📆 <strong>Day:</strong>
+                                        ${day}
+                                    </p>
+                                  `
+                                : ""
+                        }
+
+                        <p>
+                            🕐 <strong>Time:</strong>
+                            ${escapeHTML(time)}
+                        </p>
+
+                        <p>
+                            📍 <strong>Location:</strong>
+                            ${escapeHTML(
+                                event.location ||
+                                "Online"
+                            )}
+                        </p>
+
+                        <p>
+                            Status:
+                            <strong>
+                                ${escapeHTML(event.status)}
+                            </strong>
+                        </p>
+
+                        <button
+                            type="button"
+                            onclick="deleteEvent(${event.id})"
+                        >
+                            🗑️ Delete Event
+                        </button>
+
+                    </div>
+                `;
+
+            }).join("");
+
+    } catch (error) {
+
+        console.error(
+            "Admin events error:",
+            error
+        );
+
+        eventsList.innerHTML = `
+            <p>
+                Unable to load events.
+            </p>
+        `;
+    }
+}
+
+
+document
+    .getElementById("createEventButton")
+    .addEventListener("click", async () => {
+
+        const title =
+            document.getElementById("eventTitle")
+                .value.trim();
+
+        const description =
+            document.getElementById("eventDescription")
+                .value.trim();
+
+        const eventDate =
+            document.getElementById("eventDate")
+                .value;
+
+        const eventTime =
+            document.getElementById("eventTime")
+                .value;
+
+        const location =
+            document.getElementById("eventLocation")
+                .value.trim();
+
+        const status =
+            document.getElementById("eventStatus")
+                .value;
+
+        const message =
+            document.getElementById("eventMessage");
+
+        if (!title) {
+
+            message.textContent =
+                "Please enter an event title.";
+
+            return;
+        }
+
+        if (!description) {
+
+            message.textContent =
+                "Please enter an event description.";
+
+            return;
+        }
+
+        if (!eventDate) {
+
+            message.textContent =
+                "Please select an event date.";
+
+            return;
+        }
+
+        const button =
+            document.getElementById(
+                "createEventButton"
+            );
+
+        button.disabled = true;
+        button.textContent = "Creating...";
+
+        try {
+
+            const response =
+                await fetch(
+                    "/api/admin/events",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            title: title,
+                            description: description,
+                            event_date: eventDate,
+                            event_time: eventTime,
+                            location: location,
+                            status: status
+                        })
+                    }
+                );
+
+            const data =
+                await response.json();
+
+            if (!response.ok) {
+
+                message.textContent =
+                    data.message ||
+                    "Unable to create event.";
+
+                return;
+            }
+
+            message.textContent =
+                "Event created successfully.";
+
+            document.getElementById(
+                "eventTitle"
+            ).value = "";
+
+            document.getElementById(
+                "eventDescription"
+            ).value = "";
+
+            document.getElementById(
+                "eventDate"
+            ).value = "";
+
+            document.getElementById(
+                "eventTime"
+            ).value = "";
+
+            document.getElementById(
+                "eventLocation"
+            ).value = "";
+
+            document.getElementById(
+                "eventStatus"
+            ).value = "upcoming";
+
+            loadAdminEvents();
+
+        } catch (error) {
+
+            console.error(
+                "Create event error:",
+                error
+            );
+
+            message.textContent =
+                "Unable to connect to the server.";
+
+        } finally {
+
+            button.disabled = false;
+            button.textContent = "Create Event";
+
+        }
+
+    });
+
+
+async function deleteEvent(eventId) {
+
+    const confirmed =
+        confirm(
+            "Are you sure you want to delete this event?"
+        );
+
+    if (!confirmed) {
+        return;
+    }
+
+    try {
+
+        const response =
+            await fetch(
+                `/api/admin/events/${eventId}`,
+                {
+                    method: "DELETE"
+                }
+            );
+
+        const data =
+            await response.json();
+
+        if (!response.ok) {
+
+            alert(
+                data.message ||
+                "Unable to delete event."
+            );
+
+            return;
+        }
+
+        alert(
+            "Event deleted successfully."
+        );
+
+        loadAdminEvents();
+
+    } catch (error) {
+
+        console.error(
+            "Delete event error:",
+            error
+        );
+
+        alert(
+            "Unable to connect to the server."
+        );
+    }
+}
+
+
+checkAdminAccess();
+loadAdminMembers();
+loadAdminPrayerRequests();
+loadAdminTeachings();
+loadAdminEvents();
+// =========================
+// LOAD ADMIN PAST PRAYERS
+// =========================
+
+async function loadAdminPastPrayers() {
+
+    const list = document.getElementById("adminPastPrayersList");
+
+    if (!list) return;
+
+    list.innerHTML = "Loading past prayers...";
+
+    try {
+
+        const response = await fetch("/api/admin/past-prayers");
+
+        const data = await response.json();
+
+        if (!response.ok || !data.success) {
+            throw new Error(
+                data.message || "Could not load past prayers."
+            );
+        }
+
+        if (data.pastPrayers.length === 0) {
+
+            list.innerHTML = `
+                <p>No past prayers have been added yet.</p>
+            `;
+
+            return;
+        }
+
+        list.innerHTML = data.pastPrayers.map(prayer => {
+
+            const formattedDate = prayer.prayer_date
+                ? prayer.prayer_date.substring(0, 10)
+                : "";
+
+            return `
+                <div class="admin-past-prayer-item">
+
+                    <h4>${escapeHTML(prayer.title)}</h4>
+
+                    <p>
+                        <strong>Day:</strong>
+                        ${escapeHTML(prayer.prayer_day)}
+                    </p>
+
+                    <p>
+                        <strong>Date:</strong>
+                        ${formattedDate}
+                    </p>
+
+                    <p>
+                        <strong>Leader:</strong>
+                        ${escapeHTML(prayer.prayer_leader || "Not provided")}
+                    </p>
+
+                    <p>
+                        <strong>Prayer Points:</strong><br>
+                        ${escapeHTML(prayer.prayer_points || "None provided")}
+                    </p>
+
+                    ${
+                        prayer.recording_link
+                            ? `
+                                <p>
+                                    <strong>Recording:</strong>
+                                    <a
+                                        href="${escapeHTML(prayer.recording_link)}"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Open Recording
+                                    </a>
+                                </p>
+                              `
+                            : ""
+                    }
+
+                    ${
+                        prayer.description
+                            ? `
+                                <p>
+                                    <strong>Description:</strong><br>
+                                    ${escapeHTML(prayer.description)}
+                                </p>
+                              `
+                            : ""
+                    }
+
+                </div>
+            `;
+
+        }).join("");
+
+    } catch (error) {
+
+        console.error("Past prayers error:", error);
+
+        list.innerHTML = `
+            <p>
+                Could not load past prayers.
+                Please try again.
+            </p>
+        `;
+    }
+}
+
+
+// =========================
+// CREATE PAST PRAYER
+// =========================
+
+const createPastPrayerButton =
+    document.getElementById("createPastPrayerButton");
+
+if (createPastPrayerButton) {
+
+    createPastPrayerButton.addEventListener("click", async () => {
+
+        const title =
+            document.getElementById("pastPrayerTitle").value.trim();
+
+        const prayer_day =
+            document.getElementById("pastPrayerDay").value;
+
+        const prayer_date =
+            document.getElementById("pastPrayerDate").value;
+
+        const prayer_leader =
+            document.getElementById("pastPrayerLeader").value.trim();
+
+        const prayer_points =
+            document.getElementById("pastPrayerPoints").value.trim();
+
+        const recording_link =
+            document.getElementById("pastPrayerRecording").value.trim();
+
+        const description =
+            document.getElementById("pastPrayerDescription").value.trim();
+
+        const message =
+            document.getElementById("pastPrayerMessage");
+
+
+        if (!title || !prayer_day || !prayer_date) {
+
+            message.textContent =
+                "Please enter the title, prayer day and prayer date.";
+
+            return;
+        }
+
+
+        message.textContent =
+            "Adding past prayer...";
+
+
+        try {
+
+            const response = await fetch(
+                "/api/admin/past-prayers",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        title,
+                        prayer_day,
+                        prayer_date,
+                        prayer_leader,
+                        prayer_points,
+                        recording_link,
+                        description
+                    })
+                }
+            );
+
+
+            const data = await response.json();
+
+
+            if (!response.ok || !data.success) {
+
+                throw new Error(
+                    data.message ||
+                    "Could not add past prayer."
+                );
+            }
+
+
+            message.textContent =
+                "Past prayer added successfully.";
+
+
+            document.getElementById("pastPrayerTitle").value = "";
+            document.getElementById("pastPrayerDate").value = "";
+            document.getElementById("pastPrayerLeader").value = "";
+            document.getElementById("pastPrayerPoints").value = "";
+            document.getElementById("pastPrayerRecording").value = "";
+            document.getElementById("pastPrayerDescription").value = "";
+
+
+            loadAdminPastPrayers();
+
+
+        } catch (error) {
+
+            console.error("Create past prayer error:", error);
+
+            message.textContent =
+                error.message ||
+                "Could not add past prayer.";
+        }
+
+    });
+
+}
+
+
+// Load past prayers when admin page opens
+loadAdminPastPrayers();
+</script>
+
+
+
+</body>
+</html>

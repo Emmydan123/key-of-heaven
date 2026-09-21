@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Member Dashboard | Key of Heaven</title>
+
+    <meta name="description"
+        content="Your private Key of Heaven member dashboard.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            Key of <span>Heaven</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <nav class="navbar" id="navbar">
+
+            <a href="index.html">Home</a>
+
+            <a href="pages/prayer-room.html">
+                Prayer Room
+            </a>
+
+            <a href="pages/prayer-request.html">
+                Prayer Request
+            </a>
+
+            <a href="pages/events.html">
+                Events
+            </a>
+
+            <a href="pages/members.html">
+                Members
+            </a>
+
+            <a href="dashboard.html" class="nav-login active">
+                Dashboard
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= DASHBOARD ================= -->
+<main class="dashboard-page">
+
+    <div class="container">
+
+
+        <!-- ================= WELCOME ================= -->
+        <section class="dashboard-welcome">
+
+            <div>
+
+                <span class="section-label">
+                    MEMBER DASHBOARD
+                </span>
+
+                <h1>
+                    Welcome,
+                    <span id="dashboardName">Member</span>
+                </h1>
+
+                <p>
+                    Stay connected with Key of Heaven, manage your
+                    profile and keep up with your prayer journey.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-avatar" id="dashboardAvatar">
+                M
+            </div>
+
+        </section>
+
+
+        <!-- ================= DASHBOARD GRID ================= -->
+        <section class="dashboard-grid">
+
+
+            <!-- PROFILE CARD -->
+            <article class="dashboard-card profile-card">
+
+                <div class="dashboard-card-header">
+
+                    <div class="dashboard-card-icon">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            My Profile
+                        </h2>
+
+                        <p>
+                            Your member information
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-picture-edit-preview" style="width:110px;height:110px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#eee;">
+                    <img id="editProfilePicturePreview" src="" alt="Profile picture preview" style="width:100%;height:100%;object-fit:cover;display:none;">
+                    <span id="editProfilePictureInitial"></span>
+                </div>
+
+                    <div>
+
+                        <h3 id="profileName">
+                            Member Name
+                        </h3>
+
+                        <p id="profileUsername">
+                            @username
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-details">
+
+                    <div>
+                        <strong>Email</strong>
+
+                        <span id="profileEmail">
+                            member@example.com
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>Joined</strong>
+
+                        <span id="profileJoined">
+                            Member since 2026
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>Profile</strong>
+
+                        <span id="profileVisibility">
+                            Public
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn btn-primary dashboard-button"
+                    id="editProfileButton"
+                >
+                    Edit Profile
+                </button>
+
+            </article>
+
+
+            <!-- PRAYER REQUEST CARD -->
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-header">
+
+                    <div class="dashboard-card-icon">
+                        🙏
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Prayer Requests
+                        </h2>
+
+                        <p>
+                            Manage your prayer requests
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-stat">
+
+                    <strong id="prayerCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Prayer Requests
+                    </span>
+
+                </div>
+
+
+                <p class="dashboard-card-text">
+                    Submit a new prayer request or view the requests
+                    you have previously submitted.
+                </p>
+
+
+                <div class="dashboard-actions">
+
+                    <a
+                        href="pages/prayer-request.html"
+                        class="btn btn-primary"
+                    >
+                        New Prayer Request
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRAYER ROOM CARD -->
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-header">
+
+                    <div class="dashboard-card-icon">
+                        🕊️
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Prayer Room
+                        </h2>
+
+                        <p>
+                            Join our online gatherings
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-session">
+
+                    <span class="session-day">
+                        NEXT SESSION
+                    </span>
+
+                    <strong>
+                        Monday Prayer
+                    </strong>
+
+                    <span>
+                        9:00
+                    </span>
+
+                </div>
+
+
+                <p class="dashboard-card-text">
+                    Join the Key of Heaven community for prayer,
+                    teaching and fellowship online.
+                </p>
+
+
+                <a
+                    href="pages/prayer-room.html"
+                    class="btn btn-primary"
+                >
+                    Enter Prayer Room
+                </a>
+
+            </article>
+
+
+            <!-- EVENTS CARD -->
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-header">
+
+                    <div class="dashboard-card-icon">
+                        📅
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Upcoming Events
+                        </h2>
+
+                        <p>
+                            Stay up to date
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <ul class="dashboard-event-list">
+
+                    <li>
+
+                        <div class="event-mini-icon">
+                            🙏
+                        </div>
+
+                        <div>
+                            <strong>
+                                Monday Prayer
+                            </strong>
+
+                            <span>
+                                Monday • 9:00
+                            </span>
+                        </div>
+
+                    </li>
+
+
+                    <li>
+
+                        <div class="event-mini-icon">
+                            📖
+                        </div>
+
+                        <div>
+                            <strong>
+                                Wednesday Teaching
+                            </strong>
+
+                            <span>
+                                Wednesday • 9:00
+                            </span>
+                        </div>
+
+                    </li>
+
+
+                    <li>
+
+                        <div class="event-mini-icon">
+                            🙏
+                        </div>
+
+                        <div>
+                            <strong>
+                                Friday Prayer
+                            </strong>
+
+                            <span>
+                                Friday • 9:00
+                            </span>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="pages/events.html"
+                    class="dashboard-text-link"
+                >
+                    View All Events →
+                </a>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- ================= PROFILE EDITOR ================= -->
+        <section
+            class="profile-editor"
+            id="profileEditor"
+        >
+
+            <div class="profile-editor-header">
+
+                <div>
+
+                    <span class="section-label">
+                        ACCOUNT SETTINGS
+                    </span>
+
+                    <h2>
+                        Edit My Profile
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="closeEditor"
+                    class="close-editor"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="profileForm">
+
+                <div class="profile-form-grid">
+
+
+                    <!-- PROFILE PICTURE -->
+                    <div class="form-group full-width">
+
+                        <label>
+                            Profile Picture
+                        </label>
+
+                        <div
+                            class="profile-picture-editor"
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                                flex-wrap: wrap;
+                            "
+                        >
+
+                            <div
+                                class="profile-picture-edit-preview"
+                                style="
+                                    width: 110px;
+                                    height: 110px;
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: #eee;
+                                "
+                            >
+
+                                <img
+                                    id="editProfilePicturePreview"
+                                    src=""
+                                    alt="Profile picture preview"
+                                    style="
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        display: none;
+                                    "
+                                >
+
+                                <span id="editProfilePictureInitial">
+                                    M
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <input
+                                    type="file"
+                                    id="editProfilePicture"
+                                    accept="image/jpeg,image/png,image/webp"
+                                >
+
+                                <small>
+                                    Choose a JPG, PNG or WebP image.
+                                    Maximum size: 5 MB.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FULL NAME -->
+                    <div class="form-group">
+
+                        <label for="editName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editName"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- USERNAME -->
+                    <div class="form-group">
+
+                        <label for="editUsername">
+                            Username
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editUsername"
+                            minlength="3"
+                            maxlength="30"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="editEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="editEmail"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+                    <div class="form-group">
+
+                        <label for="editPhone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="editPhone"
+                            placeholder="Phone number"
+                        >
+
+                    </div>
+
+
+                    <!-- BIO -->
+                    <div class="form-group full-width">
+
+                        <label for="editBio">
+                            Bio
+                        </label>
+
+                        <textarea
+                            id="editBio"
+                            rows="4"
+                            maxlength="300"
+                            placeholder="Tell the community about yourself..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- SCRIPTURE -->
+                    <div class="form-group">
+
+                        <label for="editScripture">
+                            Favorite Scripture / Quote
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editScripture"
+                            maxlength="200"
+                            placeholder="Your favorite Scripture"
+                        >
+
+                    </div>
+
+
+                    <!-- VISIBILITY -->
+                    <div class="form-group">
+
+                        <label>
+                            Profile Visibility
+                        </label>
+
+                        <select id="editVisibility">
+
+                            <option value="public">
+                                Public
+                            </option>
+
+                            <option value="private">
+                                Private
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-editor-actions">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Save Changes
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-outline"
+                        id="cancelEdit"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="profileMessage"
+                    class="auth-message"
+                ></div>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= QUICK LINKS ================= -->
+        <section class="dashboard-quick">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    QUICK ACCESS
+                </span>
+
+                <h2>
+                    Continue Your Journey
+                </h2>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+                <a
+                    href="pages/past-prayers.html"
+                    class="quick-card"
+                >
+
+                    <span>🎧</span>
+
+                    <strong>
+                        Past Prayers
+                    </strong>
+
+                    <small>
+                        Listen and revisit previous prayers.
+                    </small>
+
+                </a>
+
+
+                <a
+                    href="pages/teachings.html"
+                    class="quick-card"
+                >
+
+                    <span>📖</span>
+
+                    <strong>
+                        Teachings
+                    </strong>
+
+                    <small>
+                        Explore previous teachings.
+                    </small>
+
+                </a>
+
+
+                <a
+                    href="pages/events.html"
+                    class="quick-card"
+                >
+
+                    <span>📅</span>
+
+                    <strong>
+                        Events
+                    </strong>
+
+                    <small>
+                        See upcoming community programs.
+                    </small>
+
+                </a>
+
+
+                <a
+                    href="pages/members.html"
+                    class="quick-card"
+                >
+
+                    <span>👥</span>
+
+                    <strong>
+                        Members
+                    </strong>
+
+                    <small>
+                        Explore the Key of Heaven community.
+                    </small>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACCOUNT ACTIONS ================= -->
+        <section class="account-actions">
+
+            <button
+                type="button"
+                id="logoutButton"
+                class="logout-button"
+            >
+                Log Out
+            </button>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <h3>
+                Key of <span>Heaven</span>
+            </h3>
+
+            <p>
+                A digital home for prayer, fellowship,
+                spiritual growth and community.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="pages/about.html">
+                About
+            </a>
+
+            <a href="pages/prayer-room.html">
+                Prayer Room
+            </a>
+
+            <a href="pages/events.html">
+                Events
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Account
+            </h4>
+
+            <a href="pages/members.html">
+                Members
+            </a>
+
+            <a href="pages/login.html">
+                Login
+            </a>
+
+            <a href="pages/signup.html">
+                Create Account
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Connect
+            </h4>
+
+            <a
+                href="https://chat.whatsapp.com/IXUpjIuCqWgBbdZZ3yXMce"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp
+            </a>
+
+            <a
+                href="https://www.youtube.com/@KeyOfHeaven-d5p"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                YouTube
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@keyofheaven8"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                TikTok
+            </a>
+
+            <a href="mailto:keyofheaven571@gmail.com">
+                Email
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="currentYear"></span>
+            Key of Heaven. All rights reserved.
+        </p>
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+<script src="js/main.js"></script>
+
+<script>
+
+    const editProfileButton =
+        document.getElementById("editProfileButton");
+
+    const profileEditor =
+        document.getElementById("profileEditor");
+
+    const closeEditor =
+        document.getElementById("closeEditor");
+
+    const cancelEdit =
+        document.getElementById("cancelEdit");
+
+    const profileForm =
+        document.getElementById("profileForm");
+
+    const profileMessage =
+        document.getElementById("profileMessage");
+
+    const logoutButton =
+        document.getElementById("logoutButton");
+
+    const editProfilePicture =
+        document.getElementById("editProfilePicture");
+
+    const editProfilePicturePreview =
+        document.getElementById("editProfilePicturePreview");
+
+    const editProfilePictureInitial =
+        document.getElementById("editProfilePictureInitial");
+
+
+    let currentProfilePicture = null;
+
+
+    /* ================= OPEN PROFILE EDITOR ================= */
+
+    editProfileButton.addEventListener(
+        "click",
+        function () {
+
+            profileEditor.classList.add("show");
+
+            profileEditor.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+    );
+
+
+    /* ================= CLOSE PROFILE EDITOR ================= */
+
+    function closeProfileEditor() {
+
+        profileEditor.classList.remove("show");
+
+    }
+
+
+    closeEditor.addEventListener(
+        "click",
+        closeProfileEditor
+    );
+
+
+    cancelEdit.addEventListener(
+        "click",
+        closeProfileEditor
+    );
+
+    /* ================= PROFILE PICTURE PREVIEW ================= */
+
+editProfilePicture.addEventListener(
+    "change",
+    function () {
+
+        const file =
+            editProfilePicture.files[0];
+
+        if (!file) {
+            editProfilePicturePreview.style.display = "none";
+            editProfilePictureInitial.style.display = "block";
+            return;
+        }
+
+        const allowedTypes = [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+        ];
+
+        if (!allowedTypes.includes(file.type)) {
+
+            alert(
+                "Please choose a JPG, PNG or WebP image."
+            );
+
+            editProfilePicture.value = "";
+
+            editProfilePicturePreview.style.display = "none";
+            editProfilePictureInitial.style.display = "block";
+
+            return;
+        }
+
+        if (file.size > 5 * 1024 * 1024) {
+
+            alert(
+                "Profile picture must be 5 MB or smaller."
+            );
+
+            editProfilePicture.value = "";
+
+            editProfilePicturePreview.style.display = "none";
+            editProfilePictureInitial.style.display = "block";
+
+            return;
+        }
+
+        const reader =
+            new FileReader();
+
+        reader.onload = function (event) {
+
+            editProfilePicturePreview.src =
+                event.target.result;
+
+            // Keep the preview inside the avatar box
+            editProfilePicturePreview.style.width =
+                "100%";
+
+            editProfilePicturePreview.style.height =
+                "100%";
+
+            editProfilePicturePreview.style.maxWidth =
+                "100%";
+
+            editProfilePicturePreview.style.maxHeight =
+                "100%";
+
+            editProfilePicturePreview.style.objectFit =
+                "cover";
+
+            editProfilePicturePreview.style.display =
+                "block";
+
+            editProfilePictureInitial.style.display =
+                "none";
+
+        };
+
+        reader.readAsDataURL(file);
+
+    }
+);
+
+
+    /* ================= SAVE PROFILE ================= */
+
+    profileForm.addEventListener(
+        "submit",
+        async function (event) {
+
+            event.preventDefault();
+
+
+            const fullName =
+                document.getElementById("editName")
+                    .value.trim();
+
+            const username =
+                document.getElementById("editUsername")
+                    .value.trim();
+
+            const email =
+                document.getElementById("editEmail")
+                    .value.trim();
+
+            const phone =
+                document.getElementById("editPhone")
+                    .value.trim();
+
+            const bio =
+                document.getElementById("editBio")
+                    .value.trim();
+
+            const scripture =
+                document.getElementById("editScripture")
+                    .value.trim();
+
+            const visibility =
+                document.getElementById("editVisibility")
+                    .value;
+
+
+            profileMessage.className =
+                "profile-message";
+
+            profileMessage.textContent =
+                "Saving your profile...";
+
+
+            try {
+
+                const formData =
+                    new FormData();
+
+
+                formData.append(
+                    "full_name",
+                    fullName
+                );
+
+                formData.append(
+                    "username",
+                    username
+                );
+
+                formData.append(
+                    "email",
+                    email
+                );
+
+                formData.append(
+                    "phone",
+                    phone
+                );
+
+                formData.append(
+                    "bio",
+                    bio
+                );
+
+                formData.append(
+                    "favorite_scripture",
+                    scripture
+                );
+
+                formData.append(
+                    "profile_visibility",
+                    visibility
+                );
+
+
+                if (
+                    editProfilePicture.files.length > 0
+                ) {
+
+                    formData.append(
+                        "profilePicture",
+                        editProfilePicture.files[0]
+                    );
+
+                }
+
+
+                const response =
+                    await fetch("/api/profile", {
+
+                        method: "PUT",
+
+                        body: formData
+
+                    });
+
+
+                const data =
+                    await response.json();
+
+
+                if (!response.ok) {
+
+                    profileMessage.textContent =
+                        data.message ||
+                        "Unable to update your profile.";
+
+                    profileMessage.classList.add("show");
+
+                    return;
+                }
+
+
+                profileMessage.textContent =
+                    "Profile updated successfully!";
+
+                profileMessage.classList.add("show");
+
+
+                /* UPDATE NAME */
+
+                document.getElementById(
+                    "dashboardName"
+                ).textContent = fullName;
+
+
+                document.getElementById(
+                    "profileName"
+                ).textContent = fullName;
+
+
+                document.getElementById(
+                    "profileUsername"
+                ).textContent =
+                    "@" + username;
+
+
+                document.getElementById(
+                    "profileEmail"
+                ).textContent = email;
+
+
+                document.getElementById(
+                    "profileVisibility"
+                ).textContent =
+                    visibility === "private"
+                        ? "Private"
+                        : "Public";
+
+
+                /* UPDATE INITIAL */
+
+                document.getElementById(
+                    "dashboardAvatar"
+                ).textContent =
+                    fullName
+                        .charAt(0)
+                        .toUpperCase();
+
+
+                document.getElementById(
+                    "profileLargeInitial"
+                ).textContent =
+                    fullName
+                        .charAt(0)
+                        .toUpperCase();
+
+
+                /*
+                 * If a new picture was uploaded,
+                 * show it immediately.
+                 */
+
+                if (
+                    editProfilePicture.files.length > 0
+                ) {
+
+                    const uploadedFile =
+                        editProfilePicture.files[0];
+
+                    const localPreview =
+                        URL.createObjectURL(
+                            uploadedFile
+                        );
+
+
+                    document.getElementById(
+                        "dashboardAvatar"
+                    ).innerHTML =
+                        `<img src="${localPreview}" alt="Profile picture" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">`;
+
+
+                    document.getElementById(
+                        "profileLargeImage"
+                    ).src = localPreview;
+
+                    document.getElementById(
+                        "profileLargeImage"
+                    ).style.display = "block";
+
+                    document.getElementById(
+                        "profileLargeInitial"
+                    ).style.display = "none";
+
+                }
+
+
+                /*
+                 * Clear selected file.
+                 */
+
+                editProfilePicture.value = "";
+
+
+                /*
+                 * Refresh the member navigation.
+                 */
+
+                if (
+                    typeof loadMemberNavigation ===
+                    "function"
+                ) {
+
+                    loadMemberNavigation();
+
+                }
+
+
+            } catch (error) {
+
+                console.error(
+                    "Profile update error:",
+                    error
+                );
+
+
+                profileMessage.textContent =
+                    "Unable to connect to the server. Please try again.";
+
+                profileMessage.classList.add("show");
+
+            }
+
+        }
+    );
+
+
+    /* ================= LOGOUT ================= */
+
+    logoutButton.addEventListener(
+        "click",
+        function () {
+
+            window.location.href =
+                "pages/login.html";
+
+        }
+    );
+
+
+    /* ================= LOAD MEMBER PROFILE ================= */
+
+    async function loadMemberProfile() {
+
+        try {
+
+            const response =
+                await fetch(
+                    "/api/me",
+                    {
+                        credentials: "include"
+                    }
+                );
+
+
+            if (!response.ok) {
+
+                window.location.href =
+                    "pages/login.html";
+
+                return;
+            }
+
+
+            const data =
+                await response.json();
+
+
+            if (
+                !data.success ||
+                !data.member
+            ) {
+
+                window.location.href =
+                    "pages/login.html";
+
+                return;
+            }
+
+
+            const member =
+                data.member;
+
+
+            /* ================= NAME ================= */
+
+            document.getElementById(
+                "dashboardName"
+            ).textContent =
+                member.full_name;
+
+
+            document.getElementById(
+                "profileName"
+            ).textContent =
+                member.full_name;
+
+
+            document.getElementById(
+                "profileUsername"
+            ).textContent =
+                "@" + member.username;
+
+
+            document.getElementById(
+                "profileEmail"
+            ).textContent =
+                member.email;
+
+
+            /* ================= JOINED ================= */
+
+            if (member.date_joined) {
+
+                const joinedDate =
+                    new Date(
+                        member.date_joined
+                    );
+
+
+                document.getElementById(
+                    "profileJoined"
+                ).textContent =
+                    "Member since " +
+                    joinedDate.getFullYear();
+
+            }
+
+
+            /* ================= VISIBILITY ================= */
+
+            document.getElementById(
+                "profileVisibility"
+            ).textContent =
+                member.profile_visibility ===
+                "private"
+                    ? "Private"
+                    : "Public";
+
+
+            /* ================= EDIT FIELDS ================= */
+
+            document.getElementById(
+                "editName"
+            ).value =
+                member.full_name;
+
+
+            document.getElementById(
+                "editUsername"
+            ).value =
+                member.username;
+
+
+            document.getElementById(
+                "editEmail"
+            ).value =
+                member.email;
+
+
+            document.getElementById(
+                "editPhone"
+            ).value =
+                member.phone || "";
+
+
+            document.getElementById(
+                "editBio"
+            ).value =
+                member.bio || "";
+
+
+            document.getElementById(
+                "editScripture"
+            ).value =
+                member.favorite_scripture || "";
+
+
+            document.getElementById(
+                "editVisibility"
+            ).value =
+                member.profile_visibility ||
+                "public";
+
+
+            /* ================= PROFILE PICTURE ================= */
+
+            currentProfilePicture =
+                member.profile_picture ||
+                null;
+
+
+            const initial =
+                member.full_name
+                    .charAt(0)
+                    .toUpperCase();
+
+
+            /* Dashboard avatar */
+
+            const dashboardAvatar =
+                document.getElementById(
+                    "dashboardAvatar"
+                );
+
+
+            if (currentProfilePicture) {
+
+                dashboardAvatar.innerHTML =
+                    `<img src="${currentProfilePicture}" alt="Profile picture" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">`;
+
+            } else {
+
+                dashboardAvatar.textContent =
+                    initial;
+
+            }
+
+
+            /* Large profile picture */
+
+            const profileLargeImage =
+                document.getElementById(
+                    "profileLargeImage"
+                );
+
+
+            const profileLargeInitial =
+                document.getElementById(
+                    "profileLargeInitial"
+                );
+
+
+            if (currentProfilePicture) {
+
+                profileLargeImage.src =
+                    currentProfilePicture;
+
+                profileLargeImage.style.display =
+                    "block";
+
+                profileLargeInitial.style.display =
+                    "none";
+
+            } else {
+
+                profileLargeImage.style.display =
+                    "none";
+
+                profileLargeInitial.textContent =
+                    initial;
+
+                profileLargeInitial.style.display =
+                    "block";
+
+            }
+
+
+            /* Edit picture preview */
+
+            const editPreview =
+                document.getElementById(
+                    "editProfilePicturePreview"
+                );
+
+
+            const editInitial =
+                document.getElementById(
+                    "editProfilePictureInitial"
+                );
+
+
+            if (currentProfilePicture) {
+
+                editPreview.src =
+                    currentProfilePicture;
+
+                editPreview.style.display =
+                    "block";
+
+                editInitial.style.display =
+                    "none";
+
+            } else {
+
+                editPreview.style.display =
+                    "none";
+
+                editInitial.textContent =
+                    initial;
+
+                editInitial.style.display =
+                    "block";
+
+            }
+
+
+        } catch (error) {
+
+            console.error(
+                "Profile loading error:",
+                error
+            );
+
+        }
+
+    }
+
+
+    loadMemberProfile();
+
+</script>
+
+</body>
+</html>
